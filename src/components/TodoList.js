@@ -4,7 +4,7 @@ function TodoList() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState('');
 
-  // Function to handle adding a new todo
+ 
   const addTodo = () => {
     if (inputValue.trim()) {
       setTodos([...todos, inputValue.trim()]);
@@ -12,7 +12,7 @@ function TodoList() {
     }
   };
 
-  // Function to handle removing a todo
+  
   const removeTodo = (index) => {
     const newTodos = todos.filter((_, i) => i !== index);
     setTodos(newTodos);
