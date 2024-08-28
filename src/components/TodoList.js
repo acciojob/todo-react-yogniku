@@ -1,6 +1,29 @@
 import React, { useState } from 'react';
+// import Input from './Input';
+// import List from './List';
 
-function ToDoList() {
+function TodoList() {
+
+//   const taskss = [
+//     {
+//         id : 1,
+//         task : "Khana Khao"
+//     },
+//     {
+//         id : 2,
+//         task : "Brush Kro"
+//     },
+//     {
+//         id : 3,
+//         task : "So jao"
+//     },
+//     {
+//         id : 4,
+//         task : "Sapne matt dekho"
+//     },
+// ]
+
+
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState('');
 
@@ -20,8 +43,8 @@ function ToDoList() {
 
   return (
     <div>
-      <h2>To-Do List</h2>
-      <input
+       <h2>To-Do List</h2>
+     <input
         type="text"
         placeholder="Add a new task"
         value={inputValue}
@@ -34,10 +57,11 @@ function ToDoList() {
             {todo} <button onClick={() => removeTodo(index)}>Delete</button>
           </li>
         ))}
-      </ul>
-     
+      </ul> 
+     {/* <Input/>
+     <List tasks={tasks} setTasks={setTasks}/> */}
     </div>
   );
 }
 
-export default ToDoList;
+export default TodoList;
